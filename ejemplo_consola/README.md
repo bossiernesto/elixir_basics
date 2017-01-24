@@ -1,4 +1,0 @@
-EjemploConsola
-==============
-
-** TODO: Add description **

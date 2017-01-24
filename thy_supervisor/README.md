@@ -1,4 +1,0 @@
-ThyInspector
-============
-
-** TODO: Add description **
