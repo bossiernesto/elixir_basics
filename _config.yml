@@ -1,0 +1,39 @@
+# Site settings
+title: Elixir basics
+url: "http://bossiernesto.github.io/elixir_basics/"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
+baseurl: "/site" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
+timezone: America/Argentina/Buenos_Aires
+description: >
+  One or more sentences introducing this blog.
+
+# Your information
+email: bossi.ernestog@gmail.com
+author: Ernesto Bossi
+avatar: "https://secure.gravatar.com/userimage/17179339/50e760920f19b70771924cfe73b17d26.jpg?size=200"
+profile: One sentence introducing yourself.
+#twitter_username: twitter_username
+github_username: bossiernesto
+
+# Comment Service (Disqus)
+#disqus_shortname: xxx   # get one: https://disqus.com/admin/signup/
+
+permalink: /archivers/:title
+gems:
+ - jekyll-paginate
+ - jekyll-gist
+ - jekyll/scholar
+ - json
+ - jekyll-assets
+ - coffee_script
+ - jekyll-redirect-from
+
+# Build settings
+paginate: 10
+paginate_path: "page:num"
+
+highlighter: rouge
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

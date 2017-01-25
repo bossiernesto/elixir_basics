@@ -1,5 +1,8 @@
-/_build
-/cover
-/deps
-erl_crash.dump
-*.ez
+_site
+.sass-cache
+.jekyll-metadata
+.idea/*
+.bundle
+node_modules
+bower_components
+Gemfile.lock

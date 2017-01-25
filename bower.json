@@ -1,0 +1,35 @@
+{
+  "name": "elixir_basics",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bossiernesto/elixir_basics",
+  "authors": [
+    "Ernesto Bossi <bossi.ernestog@gmail.com>"
+  ],
+  "description": "Jekyll/ZURB Foundation skeleton for elixir basics.",
+  "keywords": [
+    "zurb",
+    "foundation",
+    "jekyll",
+    "wiki"
+  ],
+  "license": "LGPLv2.1",
+  "dependencies": {
+    "fastclick": "1.0.6",
+    "foundation": "5.5.2",
+    "gist-async": "1.0.1",
+    "headjs": "1.0.3",
+    "highlightjs": "8.8.0",
+    "modernizr": "2.8.3",
+    "normalize-css": "3.0.3",
+    "picturefill": "2.3.1",
+    "webfontloader": "1.6.6"
+  },
+  "main": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
