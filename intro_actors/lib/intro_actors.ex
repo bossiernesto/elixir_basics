@@ -1,23 +1,24 @@
 defmodule Jose do
   def start do
-    spawn_link(fn -> loop end)
+    spawn_link(fn -> loop() end)
 #   Task.start_link (fn -> loop end)
   end
 
-  def loop do
+  def loop() do
     receive do
-      {pid, :camina} -> IO.puts 'Jose empieza a caminar. Proceso #{inspect self}'
-      {pid, :corre} -> IO.puts 'Ni ahi. Proceso #{inspect self}'
+      {pid, :camina} -> IO.puts 'Jose empieza a caminar. Proceso #{inspect self()}'
+      {pid, :corre} -> IO.puts 'Ni ahi. Proceso #{inspect self()}'
       {pid, _ } -> send pid, {:error, 'Accion Invalida de #{inspect pid}'}
     end
-    loop
+    loop()
   end
 
 end
 
 jose = Jose.start
-send jose, {self,:camina}
+send jose, {self(),:camina}
 
+#Alias por medio de un atom
 Process.register jose, :jose
 
-send :jose, {self, :corre}
+send :jose, {self(), :corre}
