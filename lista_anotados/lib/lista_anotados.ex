@@ -1,18 +1,16 @@
 defmodule ListaAnotados do
-  @moduledoc """
-  Documentation for ListaAnotados.
-  """
 
-  @doc """
-  Hello world.
+  def start_link do
+    Task.start_link(fn -> loop(%{}) end)
+  end
 
-  ## Examples
-
-      iex> ListaAnotados.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def loop(state) do
+    receive do
+      {:get, _caller, key}  ->
+        send _caller, Map.get(state, key)
+        loop(state)
+      {:put, _caller, key, value} ->
+        loop(Map.put(map, key, value))   
+    end
   end
 end
