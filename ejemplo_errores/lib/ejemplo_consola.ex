@@ -5,7 +5,7 @@ iex(1)> :bar + 1
 iex(1)> raise "Aca lanzo una runtime"
 ** (RuntimeError) Aca lanzo una runtime
 
-defmodule FuckedModule do
+defmodule ErrorModule do
   defexception message: "exception message"
 end
 
